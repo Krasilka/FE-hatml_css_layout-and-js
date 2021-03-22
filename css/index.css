@@ -169,3 +169,7 @@ header .banner h1 {
     background-color: black;
     color: white;
 }
+
+.active {
+    font-weight: bold;
+}

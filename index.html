@@ -21,7 +21,7 @@
                 <li><a href="#contacts">Contacts</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
-            <div class='clock'></div>
+            <div class="clock"></div>
         </nav>
         <div class="banner">
             <h1>Stickerz</h1>
@@ -30,64 +30,14 @@
     </header>
     <main>
         <h2 id="products">Products</h2>
-        <div class="product-list">
-            <article>
-                <h3>Baby Yoda</h3>
-                <img src="img/baby-yoda.svg" alt="Baby Yoda">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur alias nemo
-                    reiciendis
-                    incidunt dolore inventore perspiciatis omnis cupiditate odio nostrum, ipsa iste rem nesciunt beatae
-                    quam saepe illo!
-                    Non!
-                </p>
-                <div class="button-container">
-                    <button class="button card-button">Info</button>
-                    <button class="button card-button">Buy</button>
-                </div>
-            </article>
-            <article>
-                <h3>Banana</h3>
-                <img src="img/banana.svg" alt="Banana">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur alias nemo
-                    reiciendis
-                    incidunt dolore inventore perspiciatis omnis cupiditate odio nostrum, ipsa iste rem nesciunt beatae
-                    quam saepe illo!
-                    Non!
-                </p>
-                <div class="button-container">
-                    <button class="button card-button">Info</button>
-                    <button class="button card-button">Buy</button>
-                </div>
-            </article>
-            <article>
-                <h3>Girl</h3>
-                <img src="img/girl.svg" alt="Girl">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur alias nemo
-                    reiciendis
-                    incidunt dolore inventore perspiciatis omnis cupiditate odio nostrum, ipsa iste rem nesciunt beatae
-                    quam saepe illo!
-                    Non!
-                </p>
-                <div class="button-container">
-                    <button class="button card-button">Info</button>
-                    <button class="button card-button">Buy</button>
-                </div>
-            </article>
-            <article>
-                <h3>Viking</h3>
-                <img src="img/viking.svg" alt="Viking">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur alias nemo
-                    reiciendis
-                    incidunt dolore inventore perspiciatis omnis cupiditate odio nostrum, ipsa iste rem nesciunt beatae
-                    quam saepe illo!
-                    Non!
-                </p>
-                <div class="button-container">
-                    <button class="button card-button">Info</button>
-                    <button class="button card-button">Buy</button>
-                </div>
-            </article>
+        <div class="products-carousel">
+            <img class="current-image" src="" alt="Carousel image">
+            <button class="next">Next</button>
+            <button class="prev">Previous</button>
         </div>
+        <button class="sort-asc button card-button active">Sort by price Ascending</button>
+        <button class="sort-desc button card-button">Sort by price Descending</button>
+        <div class="product-list"></div>
     </main>
     <footer>
         <h2 id="contacts">Contacts</h2>
@@ -108,6 +58,9 @@
             <input type="reset">
         </form>
     </footer>
-    <script scr='js/index.js'></script>
+    <script src="js/index.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
+
 </html>
