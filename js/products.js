@@ -1,35 +1,4 @@
-const productsJSON = `
-[
-    {
-        "id": "1",
-        "title": "Baby Yoda",
-        "image": "baby-yoda.svg",
-        "description": "Baby Yoda sticker",
-        "price": 49.99
-    },
-    {
-        "id": "2",
-        "title": "Banana",
-        "image": "banana.svg",
-        "description": "Banana sticker",
-        "price": 19.99
-    },
-    {
-        "id": "3",
-        "title": "Girl",
-        "image": "girl.svg",
-        "description": "Girl sticker",
-        "price": 24.99
-    },
-    {
-        "id": "4",
-        "title": "Viking",
-        "image": "viking.svg",
-        "description": "Viking sticker",
-        "price": 34.99
-    }
-]
-`;
+
 
 function renderProducts(products, sortOrder = 'ascending') {
     const productsContainer = document.querySelector('.product-list');
@@ -51,7 +20,13 @@ function renderProducts(products, sortOrder = 'ascending') {
     }
 }
 
-renderProducts(JSON.parse(productsJSON));
+function fetchAndRenderProducts(order) {
+    fetch('products.json')
+      .then( response => response.json() )
+      .then( products => renderProducts(products, order) );
+}
+
+fetchAndRenderProducts('ascending');
 
 const sortAscendingButton = document.querySelector('.sort-asc');
 const sortDescendingButton = document.querySelector('.sort-desc');
@@ -62,7 +37,7 @@ sortDescendingButton.addEventListener('click', sortProductDescending);
 function sortProductAscending() {
     sortDescendingButton.classList.remove('active');
     sortAscendingButton.classList.add('active');
-    renderProducts(JSON.parse(productsJSON), 'ascending');
+fetchAndRenderProducts('ascending');
 }
 
 function sortProductDescending() {
